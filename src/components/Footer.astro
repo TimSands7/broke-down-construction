@@ -24,7 +24,7 @@ const year = new Date().getFullYear();
 			</div>
 
 			<!-- Links + contact -->
-			<div class="grid grid-cols-2 gap-12 sm:grid-cols-3">
+			<div class="grid grid-cols-2 gap-x-10 gap-y-12 sm:grid-cols-3 sm:gap-x-16 lg:gap-x-24">
 				<div>
 					<h3 class="font-display text-xs font-semibold uppercase tracking-[0.22em] text-clay">Explore</h3>
 					<ul class="mt-5 space-y-3">
@@ -39,7 +39,7 @@ const year = new Date().getFullYear();
 					<h3 class="font-display text-xs font-semibold uppercase tracking-[0.22em] text-clay">Contact</h3>
 					<ul class="mt-5 space-y-3">
 						<li><a href={site.phoneHref} class="text-dust transition-colors hover:text-amber">{site.phone}</a></li>
-						<li><a href={`mailto:${site.email}`} class="text-dust transition-colors hover:text-amber">{site.email}</a></li>
+						<li><a href={`mailto:${site.email}`} class="break-words text-dust transition-colors hover:text-amber">{site.email}</a></li>
 					</ul>
 				</div>
 				<div>
