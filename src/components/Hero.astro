@@ -1,14 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 import { site } from '../data/site';
-import heroImg from '../assets/hero-grading.jpg';
+import heroImg from '../assets/pexels-gezerasph-23910575.jpg';
 ---
 
 <section id="top" class="relative isolate min-h-screen overflow-hidden bg-asphalt">
 	<!-- Background photograph -->
 	<Image
 		src={heroImg}
-		alt="A freshly poured concrete walkway on a Broke Down Construction job site"
+		alt="Aerial view of a cleared and graded construction site ready for site work"
 		widths={[768, 1280, 1920]}
 		sizes="100vw"
 		class="absolute inset-0 -z-10 h-full w-full object-cover object-center"
@@ -16,8 +16,8 @@ import heroImg from '../assets/hero-grading.jpg';
 		fetchpriority="high"
 	/>
 	<!-- Overlays for legibility -->
-	<div class="absolute inset-0 -z-10 bg-gradient-to-t from-asphalt via-asphalt/75 to-asphalt/40"></div>
-	<div class="absolute inset-0 -z-10 bg-gradient-to-r from-asphalt/90 to-transparent"></div>
+	<div class="absolute inset-0 -z-10 bg-gradient-to-t from-asphalt via-asphalt/55 to-asphalt/15"></div>
+	<div class="absolute inset-0 -z-10 bg-gradient-to-r from-asphalt/75 to-transparent"></div>
 
 	<div class="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pt-32 pb-20 lg:px-10">
 		<p class="kicker kicker-rule mb-7">{site.city} · Free Estimates</p>

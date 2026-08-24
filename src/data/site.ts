@@ -49,12 +49,12 @@ export const services = [
 	{
 		title: 'Pool Installation',
 		copy: 'Excavation, grading, and site prep to get your pool project in the ground.',
-		icon: 'M3 17c1.5-1.5 3-1.5 4.5 0s3 1.5 4.5 0 3-1.5 4.5 0 3 1.5 4.5 0M4 17V6h16v11',
+		iconImage: 'pool',
 	},
 	{
 		title: 'Fence Installation',
 		copy: 'Aluminum, vinyl, and wood privacy fencing — set square, plumb, and built to last.',
-		icon: 'M4 21V9l4-3v15M4 12h4M12 21V9l4-3v15M12 12h4M20 21V6M20 6l-4 3',
+		iconImage: 'fence',
 	},
 	{
 		title: 'Tree Removal',
@@ -64,21 +64,16 @@ export const services = [
 	{
 		title: 'Land Clearing',
 		copy: 'Excavators and mulchers turn overgrown lots into buildable, usable ground.',
-		icon: 'M3 20h18M6 20l3-9 3 5 2-4 4 8M6 20l3-9',
-	},
-	{
-		title: 'Developments',
-		copy: 'Full-site work for new builds — clearing, grading, and utilities in one crew.',
-		icon: 'M4 21V11l4-3 4 3v10M12 21V8l4-3 4 3v13M4 21h16',
+		iconImage: 'clearing',
 	},
 	{
 		title: 'Drainage Solutions',
 		copy: 'French drains and channel systems that keep water moving away from your property.',
-		icon: 'M4 6h16M6 6v6a6 6 0 0 0 12 0V6M9 20h6',
+		iconImage: 'drainage',
 	},
 	{
 		title: 'Trucking',
 		copy: 'Our own dump trucks haul dirt, stone, and debris — no waiting on a rental fleet.',
-		icon: 'M3 17V8h9v9M3 17h1a2 2 0 0 0 4 0h5a2 2 0 0 0 4 0h1v-4l-3-4h-6v8',
+		iconImage: 'trucking',
 	},
 ];

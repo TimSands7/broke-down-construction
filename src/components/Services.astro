@@ -1,5 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 import { services } from '../data/site';
+import iconPool from '../assets/icon-pool.png';
+import iconFence from '../assets/icon-fence.png';
+import iconClearing from '../assets/icon-clearing.png';
+import iconDrainage from '../assets/icon-drainage.png';
+import iconTrucking from '../assets/icon-trucking.png';
+
+const iconImages: Record<string, ImageMetadata> = {
+	pool: iconPool,
+	fence: iconFence,
+	clearing: iconClearing,
+	drainage: iconDrainage,
+	trucking: iconTrucking,
+};
 ---
 
 <section id="services" class="bg-asphalt py-24 lg:py-32">
@@ -19,9 +33,13 @@ import { services } from '../data/site';
 			{services.map((service) => (
 				<div class="group bg-panel p-9 transition-colors duration-300 hover:bg-steel">
 					<span class="flex h-12 w-12 items-center justify-center border border-line text-amber transition-colors group-hover:border-amber">
-						<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
-							<path d={service.icon} />
-						</svg>
+						{service.iconImage ? (
+							<Image src={iconImages[service.iconImage]} alt="" width={96} height={96} format="png" class="h-6 w-6 object-contain" />
+						) : (
+							<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
+								<path d={service.icon} />
+							</svg>
+						)}
 					</span>
 					<h3 class="mt-7 font-display text-xl font-semibold uppercase tracking-wide text-cream">
 						{service.title}
