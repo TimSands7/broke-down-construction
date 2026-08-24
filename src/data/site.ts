@@ -67,11 +67,6 @@ export const services = [
 		icon: 'M3 20h18M6 20l3-9 3 5 2-4 4 8M6 20l3-9',
 	},
 	{
-		title: 'Developments',
-		copy: 'Full-site work for new builds — clearing, grading, and utilities in one crew.',
-		icon: 'M4 21V11l4-3 4 3v10M12 21V8l4-3 4 3v13M4 21h16',
-	},
-	{
 		title: 'Drainage Solutions',
 		copy: 'French drains and channel systems that keep water moving away from your property.',
 		icon: 'M4 6h16M6 6v6a6 6 0 0 0 12 0V6M9 20h6',
