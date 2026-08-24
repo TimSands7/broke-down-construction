@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Broke Down Construction — brand theme
+ * Jobsite industrial: near-black asphalt base, safety-amber accent,
+ * a rust-orange echo pulled from the company logo. Hard edges, bold
+ * condensed display type built for readability at a glance.
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Surfaces — layered near-blacks, warm rather than blue */
+  --color-asphalt: #0b0b0c;   /* page base */
+  --color-panel: #161512;     /* primary panel */
+  --color-steel: #1e1c18;     /* raised panel */
+  --color-line: #322e27;      /* hairline borders */
+
+  /* Text */
+  --color-cream: #ede7d8;     /* headings / high-contrast */
+  --color-dust: #b7afa0;      /* body copy */
+  --color-clay: #857c6d;      /* muted / labels */
+
+  /* Accents — pulled from the logo */
+  --color-amber: #e2a13d;     /* primary accent */
+  --color-amber-bright: #f2bd63;
+  --color-safety: #d1531f;    /* secondary / hot accent */
+
+  /* Type */
+  --font-display: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Industrial: no rounded corners by default */
+  --radius-none: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-asphalt);
+  color: var(--color-dust);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Section eyebrow / kicker label */
+.kicker {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--color-amber);
+}
+
+/* Thin amber rule used beside kickers */
+.kicker-rule::before {
+  content: "";
+  display: inline-block;
+  width: 2.25rem;
+  height: 3px;
+  margin-right: 0.85rem;
+  vertical-align: middle;
+  background: var(--color-amber);
+}
+
+/* Diagonal hazard-stripe accent, used sparingly as a section divider */
+.hazard-strip {
+  height: 6px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--color-amber) 0 14px,
+    var(--color-asphalt) 14px 28px
+  );
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-asphalt);
+}

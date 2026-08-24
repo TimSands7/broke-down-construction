@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+import { site } from '../data/site';
+import heroImg from '../assets/hero-grading.jpg';
+---
+
+<section id="top" class="relative isolate min-h-screen overflow-hidden bg-asphalt">
+	<!-- Background photograph -->
+	<Image
+		src={heroImg}
+		alt="A freshly poured concrete walkway on a Broke Down Construction job site"
+		widths={[768, 1280, 1920]}
+		sizes="100vw"
+		class="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+		loading="eager"
+		fetchpriority="high"
+	/>
+	<!-- Overlays for legibility -->
+	<div class="absolute inset-0 -z-10 bg-gradient-to-t from-asphalt via-asphalt/75 to-asphalt/40"></div>
+	<div class="absolute inset-0 -z-10 bg-gradient-to-r from-asphalt/90 to-transparent"></div>
+
+	<div class="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pt-32 pb-20 lg:px-10">
+		<p class="kicker kicker-rule mb-7">{site.city} · Free Estimates</p>
+
+		<h1 class="max-w-4xl font-display text-6xl font-bold uppercase leading-[0.92] tracking-tight text-cream sm:text-7xl lg:text-8xl">
+			Ground up.<br />
+			<span class="text-amber">Done right.</span>
+		</h1>
+
+		<p class="mt-8 max-w-xl text-lg leading-relaxed text-dust">
+			Grading, concrete, foundations, fencing, tree removal, land clearing,
+			drainage, and trucking — one crew, one call, from raw dirt to finished
+			site.
+		</p>
+
+		<div class="mt-10 flex flex-col gap-4 sm:flex-row">
+			<a
+				href={site.phoneHref}
+				class="border border-amber bg-amber px-8 py-4 text-center font-display text-base font-semibold uppercase tracking-[0.18em] text-asphalt transition-colors hover:bg-amber-bright"
+			>
+				Call {site.phone}
+			</a>
+			<a
+				href="#work"
+				class="border border-line bg-asphalt/40 px-8 py-4 text-center font-display text-base font-semibold uppercase tracking-[0.18em] text-cream backdrop-blur transition-colors hover:border-amber hover:text-amber"
+			>
+				See Our Work
+			</a>
+		</div>
+
+		<!-- Reassurance line -->
+		<div class="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 font-display text-sm font-medium uppercase tracking-[0.18em] text-clay">
+			<span class="flex items-center gap-2">
+				<span class="h-1.5 w-1.5 bg-amber"></span> {site.radiusNote}
+			</span>
+			<span class="flex items-center gap-2">
+				<span class="h-1.5 w-1.5 bg-amber"></span> Owner-Operated
+			</span>
+		</div>
+	</div>
+
+	<!-- Scroll hint -->
+	<div class="absolute bottom-6 left-1/2 hidden -translate-x-1/2 lg:block">
+		<span class="font-display text-xs uppercase tracking-[0.4em] text-clay">Scroll</span>
+	</div>
+</section>

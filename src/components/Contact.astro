@@ -1,0 +1,50 @@
+---
+import { site } from '../data/site';
+---
+
+<section id="contact" class="bg-asphalt py-24 lg:py-32">
+	<div class="mx-auto max-w-5xl px-6 text-center lg:px-10">
+		<p class="kicker kicker-rule mb-6 text-center">Get a Free Estimate</p>
+		<h2 class="font-display text-4xl font-bold uppercase leading-tight tracking-tight text-cream lg:text-6xl">
+			Let's get it done
+		</h2>
+		<p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-dust">
+			Call, text, or email — tell us what needs doing and we'll get you a
+			straight answer and a fair price.
+		</p>
+
+		<div class="mt-12 flex flex-col items-center justify-center gap-5 sm:flex-row">
+			<a
+				href={site.phoneHref}
+				class="group flex items-center gap-4 border border-line px-8 py-5 transition-colors hover:border-amber"
+			>
+				<span class="flex h-10 w-10 shrink-0 items-center justify-center border border-line text-amber">
+					<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 4h3l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" /></svg>
+				</span>
+				<span class="text-left">
+					<span class="block font-display text-xs uppercase tracking-[0.2em] text-clay">Call</span>
+					<span class="font-display text-xl font-medium text-cream transition-colors group-hover:text-amber">{site.phone}</span>
+				</span>
+			</a>
+			<a
+				href={`mailto:${site.email}`}
+				class="group flex items-center gap-4 border border-line px-8 py-5 transition-colors hover:border-amber"
+			>
+				<span class="flex h-10 w-10 shrink-0 items-center justify-center border border-line text-amber">
+					<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M3 6h18v12H3zM3 7l9 6 9-6" /></svg>
+				</span>
+				<span class="text-left">
+					<span class="block font-display text-xs uppercase tracking-[0.2em] text-clay">Email</span>
+					<span class="font-display text-xl font-medium text-cream transition-colors group-hover:text-amber">{site.email}</span>
+				</span>
+			</a>
+		</div>
+
+		<a
+			href={site.phoneHref}
+			class="mt-12 inline-block border border-amber bg-amber px-10 py-4 text-center font-display text-base font-semibold uppercase tracking-[0.18em] text-asphalt transition-colors hover:bg-amber-bright"
+		>
+			Call {site.phone}
+		</a>
+	</div>
+</section>

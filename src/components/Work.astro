@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import concreteImg from '../assets/work-concrete.jpg';
+import treeImg from '../assets/work-tree-removal.jpg';
+import fenceImg from '../assets/work-fence.jpg';
+import clearingImg from '../assets/work-clearing.jpg';
+import drainageImg from '../assets/work-drainage.jpg';
+import truckingImg from '../assets/work-trucking.jpg';
+
+const gallery = [
+	{ img: concreteImg, label: 'Concrete', alt: 'Freshly poured concrete driveway extension' },
+	{ img: treeImg, label: 'Tree Removal', alt: 'Bucket truck reaching into tree canopy for removal' },
+	{ img: fenceImg, label: 'Fence Installation', alt: 'Aluminum fence and gate installed around a pool patio' },
+	{ img: clearingImg, label: 'Land Clearing', alt: 'Excavator clearing timber on a wooded lot' },
+	{ img: drainageImg, label: 'Drainage', alt: 'Channel drain set into concrete beside a garage' },
+	{ img: truckingImg, label: 'Trucking', alt: 'Dump truck delivering gravel to a job site' },
+];
+---
+
+<section id="work" class="bg-panel py-24 lg:py-32">
+	<div class="mx-auto max-w-7xl px-6 lg:px-10">
+		<div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+			<div class="max-w-2xl">
+				<p class="kicker kicker-rule mb-6">Our Work</p>
+				<h2 class="font-display text-4xl font-bold uppercase leading-tight tracking-tight text-cream lg:text-6xl">
+					Real jobs, real dirt
+				</h2>
+			</div>
+			<p class="font-display text-base font-medium uppercase tracking-[0.18em] text-clay">
+				Photos from recent jobs
+			</p>
+		</div>
+
+		<div class="mt-16 grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+			{gallery.map((item) => (
+				<figure class="group relative overflow-hidden bg-asphalt">
+					<div class="aspect-[4/3] overflow-hidden">
+						<Image
+							src={item.img}
+							alt={item.alt}
+							widths={[400, 600, 800]}
+							sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+							class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						/>
+					</div>
+					<div class="absolute inset-0 bg-gradient-to-t from-asphalt via-asphalt/10 to-transparent"></div>
+					<figcaption class="absolute inset-x-0 bottom-0 p-5">
+						<div class="mb-2 h-[3px] w-8 bg-amber transition-all duration-500 group-hover:w-14"></div>
+						<p class="font-display text-lg font-semibold uppercase tracking-wide text-cream">
+							{item.label}
+						</p>
+					</figcaption>
+				</figure>
+			))}
+		</div>
+	</div>
+</section>

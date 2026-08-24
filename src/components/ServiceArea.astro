@@ -1,0 +1,46 @@
+---
+import { site, serviceArea } from '../data/site';
+---
+
+<section id="area" class="bg-panel">
+	<div class="grid lg:grid-cols-2">
+		<!-- Copy side -->
+		<div class="flex items-center px-6 py-20 lg:px-16 lg:py-28">
+			<div class="max-w-lg">
+				<p class="kicker kicker-rule mb-6">Service Area</p>
+				<h2 class="font-display text-4xl font-bold uppercase leading-tight tracking-tight text-cream lg:text-5xl">
+					Based in {site.city}. On the road for you.
+				</h2>
+				<p class="mt-6 text-lg leading-relaxed text-dust">
+					We're headquartered in Kings Mountain and run jobs anywhere within
+					about a two-hour drive — Charlotte, the Piedmont, and the upstate of
+					South Carolina included.
+				</p>
+
+				<div class="mt-10 flex flex-wrap gap-3">
+					{serviceArea.map((place) => (
+						<span class="border border-line px-4 py-2 font-display text-sm font-medium uppercase tracking-[0.12em] text-dust">
+							{place}
+						</span>
+					))}
+				</div>
+
+				<p class="mt-8 text-sm leading-relaxed text-clay">
+					Not sure if you're in range? Call us — if it's close, we'll come
+					take a look.
+				</p>
+			</div>
+		</div>
+
+		<!-- Map -->
+		<div class="relative min-h-[24rem] bg-steel lg:min-h-full">
+			<iframe
+				title={`Map centered on ${site.city}`}
+				src="https://www.google.com/maps?q=Kings+Mountain+NC&output=embed"
+				class="absolute inset-0 h-full w-full grayscale contrast-125"
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			></iframe>
+		</div>
+	</div>
+</section>
