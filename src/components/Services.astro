@@ -34,7 +34,7 @@ const iconImages: Record<string, ImageMetadata> = {
 				<div class="group bg-panel p-9 transition-colors duration-300 hover:bg-steel">
 					<span class="flex h-12 w-12 items-center justify-center border border-line text-amber transition-colors group-hover:border-amber">
 						{service.iconImage ? (
-							<Image src={iconImages[service.iconImage]} alt="" width={28} height={28} class="h-7 w-7 object-contain" />
+							<Image src={iconImages[service.iconImage]} alt="" width={96} height={96} format="png" class="h-6 w-6 object-contain" />
 						) : (
 							<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
 								<path d={service.icon} />
